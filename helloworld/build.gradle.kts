@@ -49,18 +49,13 @@ dependencies {
 }
 
 mavenPublishing {
-    publishToMavenCentral(SonatypeHost.DEFAULT)
-    signAllPublications()
-}
-
-mavenPublishing {
-    coordinates("io.github.prathamngundikere.helloworld", "helloworld-composable", "1.0.0")
+    coordinates("io.github.prathamngundikere", "helloworld", "1.0.0")
 
     pom {
         name.set("Hello World")
         description.set("Android Library to import the Hello World Text")
         inceptionYear.set("2025")
-        url.set("https://github.com/username/mylibrary/")
+        url.set("https://github.com/prathamngundikere/HelloWorld_Android_Library/")
         licenses {
             license {
                 name.set("The Apache License, Version 2.0")
@@ -76,9 +71,11 @@ mavenPublishing {
             }
         }
         scm {
-            url.set("https://github.com/username/mylibrary/")
-            connection.set("scm:git:git://github.com/username/mylibrary.git")
-            developerConnection.set("scm:git:ssh://git@github.com/username/mylibrary.git")
+            url.set("https://github.com/prathamngundikere/HelloWorld_Android_Library/")
+            connection.set("scm:git:git://github.com/prathamngundikere/HelloWorld_Android_Library.git")
+            developerConnection.set("scm:git:ssh://git@github.com/prathamngundikere/HelloWorld_Android_Library.git")
         }
     }
+    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL, automaticRelease = true)
+    signAllPublications()
 }
